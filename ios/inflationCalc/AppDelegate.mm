@@ -2,6 +2,7 @@
 
 #import <React/RCTBundleURLProvider.h>
 
+#import <AppCenterReactNativeShared/AppCenterReactNativeShared.h>
 #import <AppCenterReactNative.h>
 #import <AppCenterReactNativeAnalytics.h>
 #import <AppCenterReactNativeCrashes.h>
@@ -16,8 +17,8 @@
   self.initialProps = @{};
   
   [AppCenterReactNative register];
-  [AppCenterReactNativeAnalytics registerWithInitiallyEnabled:true];
   [AppCenterReactNativeCrashes registerWithAutomaticProcessing];
+  [AppCenterReactNativeAnalytics registerWithInitiallyEnabled:true];
 
   return [super application:application didFinishLaunchingWithOptions:launchOptions];
 }
